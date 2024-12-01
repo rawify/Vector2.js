@@ -1,0 +1,61 @@
+{
+  "name": "@raw/vector2",
+  "title": "Vector2",
+  "version": "0.0.1",
+  "homepage": "https://github.com/rawify/Vector2.js",
+  "bugs": "https://github.com/rawify/Vector2.js/issues",
+  "description": "A JavaScript 2D Vector library",
+  "keywords": [
+    "math",
+    "linear algebra",
+    "vector",
+    "2d",
+    "outer",
+    "inner",
+    "dot",
+    "hadamard",
+    "schur",
+    "product",
+    "lerp",
+    "projection",
+    "reflection"
+  ],
+  "private": false,
+  "main": "./dist/vector2.js",
+  "module": "./dist/vector2.mjs",
+  "types": "./vector2.d.ts",
+  "browser": "./dist/vector2.min.js",
+  "unpkg": "./dist/vector2.min.js",
+  "readmeFilename": "README.md",
+  "exports": {
+    ".": {
+      "types": "./vector2.d.ts",
+      "require": "./dist/vector2.js",
+      "import": "./dist/vector2.mjs"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rawify/Vector2.js.git"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/rawify"
+  },
+  "author": {
+    "name": "Robert Eisele",
+    "email": "robert@raw.org",
+    "url": "https://raw.org/"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "crude-build Vector2"
+  },
+  "devDependencies": {
+    "crude-build": "^0.1.2"
+  }
+}
