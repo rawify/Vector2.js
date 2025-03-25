@@ -1,5 +1,6 @@
 # Vector2.js
 
+[![NPM Package](https://img.shields.io/npm/v/@rawify/vector2.svg?style=flat)](https://www.npmjs.com/package/@rawify/vector2 "View this project on npm")
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 Vector2.js is a lightweight 2D vector library for JavaScript that provides a set of vector operations commonly used in graphics, physics simulations, and other geometric applications.
@@ -14,7 +15,13 @@ Vector2.js is a lightweight 2D vector library for JavaScript that provides a set
 
 ## Installation
 
-To use Vector2.js, download or clone the repository:
+You can install `Vector2.js` via npm:
+
+```bash
+npm install @rawify/vector2
+```
+
+Alternatively, download or clone the repository:
 
 ```bash
 git clone https://github.com/rawify/Vector2.js
@@ -296,5 +303,5 @@ npm run test
 
 ## Copyright and Licensing
 
-Copyright (c) 2024, [Robert Eisele](https://raw.org/)
+Copyright (c) 2025, [Robert Eisele](https://raw.org/)
 Licensed under the MIT license.

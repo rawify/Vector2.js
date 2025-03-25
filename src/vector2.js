@@ -1,8 +1,8 @@
 /**
- * @license Vector2 v0.0.1 12/1/2024
+ * @license Vector2 v0.0.1 3/25/2025
  * https://github.com/rawify/Vector2.js
  *
- * Copyright (c) 2024, Robert Eisele (https://raw.org/)
+ * Copyright (c) 2025, Robert Eisele (https://raw.org/)
  * Licensed under the MIT license.
  **/
 
@@ -18,21 +18,21 @@ const EPS = 1e-13;
 /**
 @constructor
 */
-function Vector2(a, b) {
+function Vector2(x, y) {
 
   let o = this instanceof Vector2 ? this : Object.create(Vector2.prototype);
 
-  if (typeof a === "object") {
-    if (a instanceof Array) {
-      o['x'] = a[0];
-      o['y'] = a[1];
+  if (typeof x === "object") {
+    if (x instanceof Array) {
+      o['x'] = x[0];
+      o['y'] = x[1];
     } else {
-      o['x'] = a['x'];
-      o['y'] = a['y'];
+      o['x'] = x['x'];
+      o['y'] = x['y'];
     }
-  } else if (!isNaN(a) && !isNaN(b)) {
-    o['x'] = a;
-    o['y'] = b;
+  } else if (!isNaN(x) && !isNaN(y)) {
+    o['x'] = x;
+    o['y'] = y;
   }
   return o;
 }
