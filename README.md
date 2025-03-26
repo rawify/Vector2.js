@@ -70,8 +70,8 @@ let v4 = new Vector2({ x: 3, y: 4 });
 Adds the vector `v` to the current vector.
 
 ```javascript
-let v1 = newVector2(1, 2);
-let v2 = newVector2(3, 4);
+let v1 = new Vector2(1, 2);
+let v2 = new Vector2(3, 4);
 let result = v1.add(v2); // {x: 4, y: 6}
 ```
 
@@ -109,7 +109,7 @@ let result = v1.prod(v2); // {x: 3, y: 8}
 
 ### `dot(v)`
 
-Computes the dot product between the current vector and `v`.
+Computes the [dot product](https://raw.org/book/linear-algebra/dot-product/) between of the current vector and `v`.
 
 ```javascript
 let result = v1.dot(v2); // 11
@@ -117,7 +117,7 @@ let result = v1.dot(v2); // 11
 
 ### `cross(v)`
 
-Calculates the 2D cross product (perpendicular dot product) between the current vector and `v`.
+Calculates the [2D cross product](https://raw.org/book/linear-algebra/2d-perp-product/) (perpendicular dot product) between the current vector and `v`.
 
 ```javascript
 let result = v1.cross(v2); // -2
@@ -125,7 +125,7 @@ let result = v1.cross(v2); // -2
 
 ### `perp()`
 
-Finds a perpendicular vector to the current vector.
+Finds a [perpendicular vector](https://raw.org/book/linear-algebra/2d-perp-operator/) to the current vector.
 
 ```javascript
 let result = v1.perp(); // {x: -2, y: 1}
@@ -133,7 +133,7 @@ let result = v1.perp(); // {x: -2, y: 1}
 
 ### `projectTo(v)`
 
-Projects the current vector onto the vector `v`.
+Projects the current vector onto the vector `v` using [vector projection](https://raw.org/book/linear-algebra/dot-product/).
 
 ```javascript
 let result = v1.projectTo(v2); // Projection of v1 onto v2
@@ -141,7 +141,7 @@ let result = v1.projectTo(v2); // Projection of v1 onto v2
 
 ### `rejectFrom(v)`
 
-Finds the rejection of the current vector from the vector `v`.
+Finds the orthogonal [vector rejection](https://raw.org/book/linear-algebra/dot-product/) of the current vector from the vector `v`.
 
 ```javascript
 let result = v1.rejectFrom(v2); // Rejection of v1 from v2
@@ -149,10 +149,10 @@ let result = v1.rejectFrom(v2); // Rejection of v1 from v2
 
 ### `reflect(n)`
 
-Reflects the current vector across the normal vector `n`.
+Determines the [vector reflection](https://raw.org/book/linear-algebra/dot-product/) of the current vector across the vector `n`.
 
 ```javascript
-let n = newVector2(0, 1);
+let n = new Vector2(0, 1);
 let result = v1.reflect(n); // Reflection of v1 across n
 ```
 
@@ -166,7 +166,7 @@ let result = v1.angle(); // 1.107 radians
 
 ### `norm()`
 
-Returns the magnitude (Euclidean norm) of the current vector.
+Returns the magnitude or length (Euclidean norm) of the current vector.
 
 ```javascript
 let result = v1.norm(); // 2.236
@@ -174,7 +174,7 @@ let result = v1.norm(); // 2.236
 
 ### `norm2()`
 
-Returns the squared magnitude (norm squared) of the current vector.
+Returns the squared magnitude or length (norm squared) of the current vector.
 
 ```javascript
 let result = v1.norm2(); // 5

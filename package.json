@@ -1,7 +1,7 @@
 {
   "name": "@rawify/vector2",
   "title": "Vector2",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/rawify/Vector2.js",
   "bugs": "https://github.com/rawify/Vector2.js/issues",
   "description": "The RAW JavaScript 2D Vector library",
