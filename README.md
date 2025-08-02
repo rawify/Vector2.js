@@ -21,11 +21,19 @@ You can install `Vector2.js` via npm:
 npm install @rawify/vector2
 ```
 
+Or with yarn:
+
+```bash
+yarn add @rawify/vector2
+```
+
 Alternatively, download or clone the repository:
 
 ```bash
 git clone https://github.com/rawify/Vector2.js
 ```
+
+## Usage
 
 Include the `vector2.min.js` file in your project:
 
@@ -36,7 +44,7 @@ Include the `vector2.min.js` file in your project:
 Or in a Node.js project:
 
 ```javascript
-const Vector2 = require('path/to/vector2');
+const Vector2 = require('@rawify/vector2');
 ```
 
 or 
@@ -44,8 +52,6 @@ or
 ```javascript
 import Vector2 from '@rawify/vector2';
 ```
-
-## Usage
 
 ### Creating a Vector
 
@@ -156,6 +162,18 @@ let n = new Vector2(0, 1);
 let result = v1.reflect(n); // Reflection of v1 across n
 ```
 
+### `refract(n, eta)`
+
+Determines the [vector refraction](https://raw.org/book/linear-algebra/dot-product/) of the current **unit vector** across a surface with **unit normal** `n`, using the index ratio `eta = η_in / η_out` (like from air η_in=1.0 to water η_out=1.33).
+
+```javascript
+let n = new Vector2(0, 1);       // Surface normal pointing up
+let eta = 1.0 / 1.33;             // Air to glass
+let result = v1.refract(n, eta); // Refraction of v1 across n
+```
+
+Returns a new unit vector representing the **refracted direction**, or `null` if **total internal reflection** occurs.
+
 ### `angle()`
 
 Returns the angle of the current vector in radians relative to the x-axis.
@@ -260,7 +278,7 @@ Performs a linear interpolation between the current vector and `v` by the factor
 let result = v1.lerp(v2, 0.5); // {x: 2, y: 3}
 ```
 
-### `toString()``
+### `toString()`
 
 String representation of the current vector
 
@@ -282,7 +300,7 @@ Creates a vector from two points `a` and `b`.
 let result = Vector2.fromPoints({x: 1, y: 1}, {x: 4, y: 5}); // {x: 3, y: 4}
 ```
 
-### `Vector2.fromBarycentric(A, B, C, u, v)
+### `Vector2.fromBarycentric(A, B, C, u, v)`
 
 Given a triangle (A, B, C) and a barycentric coordinate (u, v[, w = 1 - u - v]) calculate the cartesian coordinate in R^2.
 

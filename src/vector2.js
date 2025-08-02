@@ -1,5 +1,5 @@
 /**
- * @license Vector2 v0.0.2 3/26/2025
+ * @license Vector2 v0.0.3 8/2/2025
  * https://github.com/rawify/Vector2.js
  *
  * Copyright (c) 2025, Robert Eisele (https://raw.org/)
@@ -92,6 +92,19 @@ Vector2.prototype = {
     const pct2 = 2 * (this['y'] * b['y'] + this['x'] * b['x']) / (b['x'] * b['x'] + b['y'] * b['y']);
 
     return newVector2(b['x'] * pct2 - this['x'], b['y'] * pct2 - this['y']);
+  },
+  'refract': function (normal, eta) { // Refraction of unit vector across unit normal with η = η_in / η_out
+
+    const dot = this['dot'](normal);
+    const k = 1 - eta * eta * (1 - dot * dot);
+    if (k < 0) return null;
+
+    const sqrtk = Math.sqrt(k);
+
+    return newVector2(
+      eta * this['x'] - (eta * dot + sqrtk) * normal['x'],
+      eta * this['y'] - (eta * dot + sqrtk) * normal['y']
+    );
   },
   'angle': function () {
     return Math.atan2(this['y'], this['x']);

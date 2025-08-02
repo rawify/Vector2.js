@@ -87,6 +87,19 @@ Vector2.prototype = {
 
     return newVector2(b['x'] * pct2 - this['x'], b['y'] * pct2 - this['y']);
   },
+  'refract': function (normal, eta) { // Refraction of unit vector across unit normal with η = η_in / η_out
+
+    const dot = this['dot'](normal);
+    const k = 1 - eta * eta * (1 - dot * dot);
+    if (k < 0) return null;
+
+    const sqrtk = Math.sqrt(k);
+
+    return newVector2(
+      eta * this['x'] - (eta * dot + sqrtk) * normal['x'],
+      eta * this['y'] - (eta * dot + sqrtk) * normal['y']
+    );
+  },
   'angle': function () {
     return Math.atan2(this['y'], this['x']);
   },
