@@ -1,5 +1,5 @@
 /**
- * @license Vector2 v0.0.3 8/2/2025
+ * @license Vector2 v0.0.4 8/3/2025
  * https://github.com/rawify/Vector2.js
  *
  * Copyright (c) 2025, Robert Eisele (https://raw.org/)

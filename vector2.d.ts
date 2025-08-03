@@ -16,6 +16,7 @@ declare class Vector2 {
     projectTo(b: Vector2): Vector2;
     rejectFrom(b: Vector2): Vector2;
     reflect(b: Vector2): Vector2;
+    refract(normal: Vector2, eta: number): Vector2;
     angle(): number;
     norm(): number;
     norm2(): number;

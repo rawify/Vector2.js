@@ -235,7 +235,11 @@ let result = v1.rotate(Math.PI / 4); // Rotates v1 by 45 degrees
 Applies a function `fn` (such as `Math.abs`, `Math.min`, `Math.max`) to the components of the current vector and an optional vector `v`.
 
 ```javascript
-let result = v1.apply(Math.max, v2); // Applies Math.max to the components of v1 and v2
+let result1 = v1.apply(Math.min, v2); // Determines the minimum of v1 and v2 on each component
+let result2 = v1.apply(Math.max, v2); // Determines the maximum of v1 and v2 on each component
+let result3 = v1.apply(Math.round); // Rounds the components of the vector
+let result4 = v1.apply(Math.floor); // Floors the components of the vector
+let result4 = v1.apply(x => Math.min(upper, Math.max(lower, x))); // Clamps the component to the interval [lower, upper]
 ```
 
 ### `toArray()`
