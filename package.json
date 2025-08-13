@@ -1,7 +1,7 @@
 {
   "name": "@rawify/vector2",
   "title": "Vector2",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "homepage": "https://github.com/rawify/Vector2.js",
   "bugs": "https://github.com/rawify/Vector2.js/issues",
   "description": "The RAW JavaScript 2D Vector library",
@@ -52,10 +52,12 @@
     "node": "*"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha tests/*.js",
     "build": "crude-build Vector2"
   },
   "devDependencies": {
-    "crude-build": "^0.1.2"
+    "chai": "^5.2.1",
+    "crude-build": "^0.1.2",
+    "mocha": "^11.7.1"
   }
 }
