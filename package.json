@@ -1,10 +1,10 @@
 {
   "name": "@rawify/vector2",
   "title": "Vector2",
-  "version": "0.0.5",
+  "version": "0.0.6",
+  "description": "The RAW JavaScript 2D Vector library",
   "homepage": "https://github.com/rawify/Vector2.js",
   "bugs": "https://github.com/rawify/Vector2.js/issues",
-  "description": "The RAW JavaScript 2D Vector library",
   "keywords": [
     "math",
     "linear algebra",
@@ -23,17 +23,38 @@
   "private": false,
   "main": "./dist/vector2.js",
   "module": "./dist/vector2.mjs",
-  "types": "./vector2.d.ts",
   "browser": "./dist/vector2.min.js",
   "unpkg": "./dist/vector2.min.js",
-  "readmeFilename": "README.md",
+  "types": "./vector2.d.ts",
   "exports": {
     ".": {
-      "types": "./vector2.d.ts",
-      "require": "./dist/vector2.js",
-      "import": "./dist/vector2.mjs"
+      "import": {
+        "types": "./vector2.d.mts",
+        "default": "./dist/vector2.mjs"
+      },
+      "require": {
+        "types": "./vector2.d.ts",
+        "default": "./dist/vector2.js"
+      },
+      "browser": {
+        "types": "./vector2.d.ts",
+        "default": "./dist/vector2.min.js"
+      },
+      "default": {
+        "types": "./vector2.d.ts",
+        "default": "./dist/vector2.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "<4.7": {
+      "*": [
+        "vector2.d.ts"
+      ]
     }
   },
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "git@github.com:rawify/Vector2.js.git"
